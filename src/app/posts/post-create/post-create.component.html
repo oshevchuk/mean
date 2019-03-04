@@ -1,0 +1,12 @@
+
+<mat-card>
+  <form #postForm="ngForm" (submit)="onAddPost(postForm)">
+    <mat-form-field>
+      <input type="text" matInput #title="ngModel" placeholder="title" name="title" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput #content="ngModel" name="content" rows="10" placeholder="content" ngModel></textarea>
+    </mat-form-field>
+    <button mat-button color="primary" type="submit">save post</button>
+  </form>
+</mat-card>
