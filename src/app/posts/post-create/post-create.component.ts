@@ -15,6 +15,7 @@ export class PostCreateComponent implements OnInit {
   @Output() postCreated = new EventEmitter<Post>();
   private mode = 'create';
   private postId: string;
+  post: Post;
 
   constructor(private postsService: PostsService, public route: ActivatedRoute) { }
 
@@ -23,6 +24,7 @@ export class PostCreateComponent implements OnInit {
       if (paramMap.has('postId')) {
         this.mode = 'edit';
         this.postId = paramMap.get('postId');
+        this.post = this.postsService.getPost(this.postId);
       } else {
         this.mode = 'create';
         this.postId = null;
@@ -30,8 +32,15 @@ export class PostCreateComponent implements OnInit {
     });
   }
 
-  onAddPost(form: NgForm) {   
+  onSavePost(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    if (this.mode === 'create') {
     this.postsService.addPost(form.value.title, form.value.content);
-    form.resetForm();    
+    } else {
+      this.postsService.updatePost(this.postId, form.value.title, form.value.content);
+    }
+    form.resetForm();
   }
 }
