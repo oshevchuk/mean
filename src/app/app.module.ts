@@ -8,8 +8,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatExpansionModule, MatProgressSpinnerModule, MatPaginatorModule,
-  MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatExpansionModule, MatProgressSpinnerModule,
+  MatPaginatorModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -23,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatExpansionModule, MatProgressSpinnerModule, MatPaginatorModule, MatToolbarModule,
+    MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatExpansionModule, MatProgressSpinnerModule, MatPaginatorModule,
+    MatToolbarModule,
     HttpClientModule,
     AppRoutingModule
   ],
