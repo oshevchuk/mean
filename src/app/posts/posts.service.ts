@@ -47,9 +47,9 @@ export class PostsService {
     postData.append('content', content);
     postData.append('image', image, title);
 
-    this.http.post<{message: string, postId: string}>('http://localhost:3000/api/posts', postData)
+    this.http.post<{message: string, post: Post}>('http://localhost:3000/api/posts', postData)
       .subscribe((res) => {
-        const post: Post = {id: res.postId, title, content};
+        const post: Post = {id: res.post.id, title, content, imagePath: res.post.imagePath};
         // const id = res.postId;
         // post.id = id;
         this.posts.push(post);
