@@ -16,3 +16,7 @@ input[type="file"] {
     max-width: 200px;
   }
 }
+
+input[type="file"]{
+  visibility: hidden;
+}

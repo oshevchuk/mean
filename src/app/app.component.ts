@@ -1,7 +1,6 @@
 import { PostsService, PostData } from './posts/posts.service';
 import { Post } from './posts/post.model';
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-root',
