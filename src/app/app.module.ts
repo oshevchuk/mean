@@ -16,13 +16,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
-import { MatFormFieldModule, MatInputModule, MatRippleModule, MatToolbarModule, MatExpansionModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatRippleModule, MatToolbarModule, MatExpansionModule,
+  MatProgressSpinnerModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCreateComponent,
-    DashComponent,
     HeaderComponent,
     PostListComponent
   ],
@@ -31,18 +31,12 @@ import { MatFormFieldModule, MatInputModule, MatRippleModule, MatToolbarModule, 
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    LayoutModule,
-    MatButtonModule,
-    MatFormFieldModule,
     MatInputModule,
-    MatRippleModule,
+    MatCardModule,
+    MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
   providers: [
