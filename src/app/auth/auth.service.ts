@@ -6,9 +6,7 @@ export interface AuthData {
   password: string;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
@@ -18,6 +16,14 @@ export class AuthService {
     this.httpClient.post('http://localhost:3000/api/user/signup', authData)
       .subscribe(res => {
 
+      });
+  }
+
+  login(email: string, password: string) {
+    const authData: AuthData = { email, password };
+    this.httpClient.post('http://localhost:3000/api/user/signup', authData)
+      .subscribe(res => {
+        
       });
   }
 }
